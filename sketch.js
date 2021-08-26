@@ -14,7 +14,7 @@ function setup() {
   trex = createSprite(50,180,20,50);
   trex.addAnimation("running", trex_running);
   
-  //Agregar escala y posición al t-rex
+  //agregar tamaño y posición al t-rex
   trex.scale = 0.5;
   trex.x = 50
   
@@ -34,7 +34,7 @@ function draw() {
     ground.x = ground.width/2;
   }
   
-  //Hacer saltar al t-rex con la tecla espacio.
+  //Hacer saltar al t-rex con la tecla espaciadora.
   if(keyDown("space")) {
     trex.velocityY = -10;
   }
@@ -42,7 +42,7 @@ function draw() {
   trex.velocityY = trex.velocityY + 0.8
   
  
- //Detener la caída del t-rex
+ //evitar que el trex caiga
   trex.collide(ground);
   drawSprites();
 }
